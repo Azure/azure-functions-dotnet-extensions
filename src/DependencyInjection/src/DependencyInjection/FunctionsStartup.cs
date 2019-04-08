@@ -2,11 +2,8 @@
 // Licensed under the MIT License. See License.txt in the project root for license information.
 
 using System;
-using System.Collections.Generic;
-using System.Text;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Hosting;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace Microsoft.Azure.Functions.Extensions.DependencyInjection
 {
@@ -18,7 +15,9 @@ namespace Microsoft.Azure.Functions.Extensions.DependencyInjection
     {
         public void Configure(IWebJobsBuilder builder)
         {
-            
+            var functionsBuilder = new FunctionsHostBuilder(builder.Services);
+
+            Configure(functionsBuilder);
         }
 
         /// <summary>
