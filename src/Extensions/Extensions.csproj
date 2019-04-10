@@ -4,6 +4,22 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>Microsoft.Azure.Functions.Extensions</AssemblyName>
     <RootNamespace>Microsoft.Azure.Functions.Extensions</RootNamespace>
+    <PackageId>Microsoft.Azure.Functions.Extensions</PackageId>
+    <Description>Provides extensions to work with Azure Functions features.</Description>
+    <Version>1.0.0$(VersionSuffix)</Version>
+    <CommitHash Condition="$(CommitHash) == ''">N/A</CommitHash>
+    <InformationalVersion>$(Version) Commit hash: $(CommitHash)</InformationalVersion>
+    <Authors>Microsoft</Authors>
+    <Company>Microsoft</Company>
+    <Copyright>© Microsoft Corporation. All rights reserved.</Copyright>
+    <PackageLicenseUrl>http://www.microsoft.com/web/webpi/eula/aspnetcomponent_rtw_enu.htm</PackageLicenseUrl>
+    <PackageProjectUrl>http://go.microsoft.com/fwlink/?LinkID=320972</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/Azure/azure-functions-dotnet-extensions</RepositoryUrl>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>sign.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>false</DelaySign>
   </PropertyGroup>
 
   <ItemGroup>
