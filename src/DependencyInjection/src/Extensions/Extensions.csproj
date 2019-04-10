@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyName>Microsoft.Azure.Functions.Extensions.DependencyInjection</AssemblyName>
-    <RootNamespace>Microsoft.Azure.Functions.Extensions.DependencyInjection</RootNamespace>
+    <AssemblyName>Microsoft.Azure.Functions.Extensions</AssemblyName>
+    <RootNamespace>Microsoft.Azure.Functions.Extensions</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
