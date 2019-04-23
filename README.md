@@ -1,5 +1,5 @@
 # .NET Extensions for Azure Functions
--
+
 |Branch|Status|
 |---|---|
 |master|[![Build Status](https://azfunc.visualstudio.com/Azure%20Functions/_apis/build/status/azure-functions-dotnet-extensions-ci?branchName=master)](https://azfunc.visualstudio.com/Azure%20Functions/_build/latest?definitionId=6&branchName=master)
