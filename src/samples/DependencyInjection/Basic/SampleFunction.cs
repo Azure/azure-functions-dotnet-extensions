@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 
-namespace DependencyInjection
+namespace Microsoft.Azure.Functions.Samples.DependencyInjectionBasic
 {
     public class SampleFunction
     {

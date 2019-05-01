@@ -4,9 +4,9 @@
 using Microsoft.Azure.Functions.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
 
-[assembly: FunctionsStartup(typeof(DependencyInjection.SampleStartup))]
+[assembly: FunctionsStartup(typeof(Microsoft.Azure.Functions.Samples.DependencyInjectionBasic.SampleStartup))]
 
-namespace DependencyInjection
+namespace Microsoft.Azure.Functions.Samples.DependencyInjectionBasic
 {
     public class SampleStartup : FunctionsStartup
     {
