@@ -9,7 +9,7 @@ using Xunit;
 
 namespace DependencyInjection.Tests
 {
-    public class FunctionsHostBuilderTests
+    public partial class FunctionsHostBuilderTests
     {
         [Fact]
         public void Configure_ConfiguresServices()
@@ -20,16 +20,6 @@ namespace DependencyInjection.Tests
             builder.Configure(webJobsBuilder);
 
             Assert.Collection(webJobsBuilder.Services, t => Assert.Equal(typeof(Foo), t.ImplementationType));
-        }
-
-        private class TestWebJobsBuilder : IWebJobsBuilder
-        {
-            public TestWebJobsBuilder()
-            {
-                Services = new ServiceCollection();
-            }
-
-            public IServiceCollection Services { get; }
         }
 
         private class TestStartup : FunctionsStartup
