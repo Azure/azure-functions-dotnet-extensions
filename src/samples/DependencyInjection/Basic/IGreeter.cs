@@ -5,6 +5,6 @@ namespace Microsoft.Azure.Functions.Samples.DependencyInjectionBasic
 {
     public interface IGreeter
     {
-        string CreateGreeting(string name);
+        string CreateGreeting(string name, string settingValue);
     }
 }

@@ -1,12 +1,12 @@
 ﻿// Copyright (c) .NET Foundation. All rights reserved.
 // Licensed under the MIT License. See License.txt in the project root for license information.
 
-using System.Collections.Generic;
+using Microsoft.Extensions.Configuration;
 
 namespace Microsoft.Azure.Functions.Extensions.DependencyInjection
 {
-    internal interface IFunctionsHostBuilderExt
+    public interface IFunctionsConfigurationBuilder
     {
-        FunctionsHostBuilderContext Context { get; }
+        IConfigurationBuilder ConfigurationBuilder { get; }
     }
 }
