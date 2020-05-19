@@ -39,6 +39,12 @@ namespace Microsoft.Azure.Functions.Extensions.DependencyInjection
         /// configure the host.</param>
         public abstract void Configure(IFunctionsHostBuilder builder);
 
+        /// <summary>
+        /// Performs the startup configuration action for configuring application configuration.
+        /// The runtime will call this method at the right time during initialization.
+        /// </summary>
+        /// <param name="builder">The <see cref="IFunctionsConfigurationBuilder"/> that can be used to
+        /// configure the application configuration.</param>
         public virtual void ConfigureAppConfiguration(IFunctionsConfigurationBuilder builder)
         {
         }
