@@ -6,7 +6,7 @@
     <RootNamespace>Microsoft.Azure.Functions.Extensions</RootNamespace>
     <PackageId>Microsoft.Azure.Functions.Extensions</PackageId>
     <Description>Provides extensions to work with Azure Functions features.</Description>
-    <Version>1.0.0$(VersionSuffix)</Version>
+    <Version>1.1.0$(VersionSuffix)</Version>
     <CommitHash Condition="$(CommitHash) == ''">N/A</CommitHash>
     <InformationalVersion>$(Version) Commit hash: $(CommitHash)</InformationalVersion>
     <Authors>Microsoft</Authors>
