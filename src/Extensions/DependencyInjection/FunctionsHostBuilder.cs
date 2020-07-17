@@ -9,7 +9,6 @@ namespace Microsoft.Azure.Functions.Extensions.DependencyInjection
 {
     internal class FunctionsHostBuilder : IFunctionsHostBuilder, IFunctionsHostBuilderExt
     {
-
         public FunctionsHostBuilder(IServiceCollection services, WebJobsBuilderContext webJobsBuilderContext)
         {
             Services = services ?? throw new ArgumentNullException(nameof(services));

@@ -14,7 +14,7 @@ namespace Microsoft.Azure.Functions.Extensions.DependencyInjection
     {
         public void Configure(IWebJobsBuilder builder)
         {
-            Configure(null, builder);
+            Configure(new WebJobsBuilderContext(), builder);
         }
 
         public void Configure(WebJobsBuilderContext context, IWebJobsBuilder builder)
