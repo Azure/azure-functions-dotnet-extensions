@@ -15,8 +15,8 @@ namespace Microsoft.Azure.Functions.Extensions.DependencyInjection
             Context = new DefaultFunctionHostBuilderContext(webJobsBuilderContext);
         }
 
-        public IConfigurationBuilder ConfigurationBuilder { get; private set; }
+        public IConfigurationBuilder ConfigurationBuilder { get; }
 
-        public FunctionsHostBuilderContext Context { get; private set; }
+        public FunctionsHostBuilderContext Context { get; }
     }
 }
