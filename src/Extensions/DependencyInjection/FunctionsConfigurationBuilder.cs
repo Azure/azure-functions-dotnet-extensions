@@ -12,7 +12,7 @@ namespace Microsoft.Azure.Functions.Extensions.DependencyInjection
         public FunctionsConfigurationBuilder(IConfigurationBuilder configurationBuilder, WebJobsBuilderContext webJobsBuilderContext)
         {
             ConfigurationBuilder = configurationBuilder ?? throw new ArgumentNullException(nameof(configurationBuilder));
-            Context = new DefaultFunctionHostBuilderContext(webJobsBuilderContext);
+            Context = new DefaultFunctionsHostBuilderContext(webJobsBuilderContext);
         }
 
         public IConfigurationBuilder ConfigurationBuilder { get; }

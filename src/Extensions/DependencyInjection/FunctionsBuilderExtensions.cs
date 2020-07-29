@@ -14,7 +14,7 @@ namespace Microsoft.Azure.Functions.Extensions.DependencyInjection
                 return hostBuilder.Context;
             }
 
-            return new DefaultFunctionHostBuilderContext(new WebJobsBuilderContext());
+            return new DefaultFunctionsHostBuilderContext(new WebJobsBuilderContext());
         }
 
         public static FunctionsHostBuilderContext GetContext(this IFunctionsConfigurationBuilder builder)
@@ -24,7 +24,7 @@ namespace Microsoft.Azure.Functions.Extensions.DependencyInjection
                 return hostBuilder.Context;
             }
 
-            return new DefaultFunctionHostBuilderContext(new WebJobsBuilderContext());
+            return new DefaultFunctionsHostBuilderContext(new WebJobsBuilderContext());
         }
     }
 }

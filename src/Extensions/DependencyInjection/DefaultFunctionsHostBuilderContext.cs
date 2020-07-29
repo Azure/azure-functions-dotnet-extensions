@@ -5,9 +5,9 @@ using Microsoft.Azure.WebJobs;
 
 namespace Microsoft.Azure.Functions.Extensions.DependencyInjection
 {
-    internal class DefaultFunctionHostBuilderContext : FunctionsHostBuilderContext
+    internal class DefaultFunctionsHostBuilderContext : FunctionsHostBuilderContext
     {
-        public DefaultFunctionHostBuilderContext(WebJobsBuilderContext webJobsBuilderContext)
+        public DefaultFunctionsHostBuilderContext(WebJobsBuilderContext webJobsBuilderContext)
             : base(webJobsBuilderContext)
         {
         }
