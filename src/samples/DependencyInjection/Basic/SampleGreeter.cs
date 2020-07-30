@@ -5,9 +5,9 @@ namespace Microsoft.Azure.Functions.Samples.DependencyInjectionBasic
 {
     public class SampleGreeter : IGreeter
     {
-        public string CreateGreeting(string name)
+        public string CreateGreeting(string name, string settingValue)
         {
-            return $"Hello, {name}. I'm a sample greeter.";
+            return $"Hello, {name}. I'm a sample greeter. The value of {nameof(SampleOptions.SampleSetting)} is '{settingValue}'.";
         }
     }
 }

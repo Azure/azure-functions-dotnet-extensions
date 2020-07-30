@@ -7,6 +7,6 @@ namespace Microsoft.Azure.Functions.Extensions.DependencyInjection
 {
     internal interface IFunctionsHostBuilderExt
     {
-        FunctionHostBuilderContext Context { get; }
+        FunctionsHostBuilderContext Context { get; }
     }
 }
