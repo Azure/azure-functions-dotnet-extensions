@@ -27,7 +27,7 @@ namespace Microsoft.Azure.Functions.Samples.DependencyInjectionScopes
         }
 
         [FunctionName("SampleFunction")]
-        public async Task<IActionResult> Run(
+        public IActionResult Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req,
             ILogger log)
         {
