@@ -1,0 +1,49 @@
+parameters:
+  - name: SkipBuildArtifacts
+    type: boolean
+    default: false
+
+jobs:
+
+- job: BuildArtifacts
+  displayName: Build Artifacts
+
+  variables:
+    - template: /eng/ci/templates/variables/build.yml@self
+
+  templateContext:
+    outputParentDirectory: $(System.DefaultWorkingDirectory)/packages
+    outputs:
+    - ${{ if eq(parameters.SkipBuildArtifacts, false) }}:
+      - output: pipelineArtifact
+        displayName: Publish artifacts
+        path: $(System.DefaultWorkingDirectory)/packages
+        artifact: drop
+
+  steps:
+  - pwsh: dotnet --version
+    displayName: "Echo dotnet version"
+  
+  - task: DotNetCoreCLI@2
+    displayName: 'Build project'
+    inputs:
+      command: 'build'
+      arguments: '-c $(buildConfiguration)'
+      projects: 'Extensions.sln'
+
+  - task: DotNetCoreCLI@2
+    displayName: 'Run tests'
+    inputs:
+      command: 'test'
+      arguments: '--no-build -c $(buildConfiguration)'
+      projects: 'Extensions.sln'
+
+  - ${{ if eq(parameters.SkipBuildArtifacts, false) }}:
+    - task: DotNetCoreCLI@2
+      displayName: 'Build package'
+      inputs:
+        command: 'custom'
+        custom: 'pack'
+        arguments: '--no-build -c Release -p:Version="$(versionPrefix).$(buildVersion)-$(versionSuffix)" -o packages'
+        projects: |
+          **/Extensions.csproj
