@@ -44,6 +44,6 @@ jobs:
       inputs:
         command: 'custom'
         custom: 'pack'
-        arguments: '--no-build -c Release -p:Version="$(versionPrefix).$(buildVersion)-$(versionSuffix)" -o packages'
+        arguments: '--no-build -c Release -p:Version="$(buildVersion)-$(versionSuffix)" -o packages'
         projects: |
           **/Extensions.csproj

@@ -1,3 +1,4 @@
 variables:
   buildConfiguration: 'Release'
   buildVersion: $[ counter('constant', 94) ]
+  versionSuffix: 'alpha'
