@@ -38,7 +38,7 @@ jobs:
       arguments: '--no-build -c $(buildConfiguration)'
       projects: 'Extensions.sln'
 
-  - ${{ if eq(parameters.SkipBuildArtifacts, false) }}:
+  - ${{ if eq(parameters.CreateArtifacts, true) }}:
     - task: DotNetCoreCLI@2
       displayName: 'Build package'
       inputs:
