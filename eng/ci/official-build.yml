@@ -50,4 +50,4 @@ extends:
       jobs:
       - template: /eng/ci/templates/jobs/build-artifacts.yml@self
         parameters:
-          SkipBuildArtifacts: false
+          CreateArtifacts: true

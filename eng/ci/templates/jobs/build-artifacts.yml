@@ -1,7 +1,7 @@
 parameters:
-  - name: SkipBuildArtifacts
+  - name: CreateArtifacts
     type: boolean
-    default: false
+    default: true
 
 jobs:
 
@@ -14,7 +14,7 @@ jobs:
   templateContext:
     outputParentDirectory: $(System.DefaultWorkingDirectory)/packages
     outputs:
-    - ${{ if eq(parameters.SkipBuildArtifacts, false) }}:
+    - ${{ if eq(parameters.CreateArtifacts, true) }}:
       - output: pipelineArtifact
         displayName: Publish artifacts
         path: $(System.DefaultWorkingDirectory)/packages
@@ -38,7 +38,7 @@ jobs:
       arguments: '--no-build -c $(buildConfiguration)'
       projects: 'Extensions.sln'
 
-  - ${{ if eq(parameters.SkipBuildArtifacts, false) }}:
+  - ${{ if eq(parameters.CreateArtifacts, true) }}:
     - task: DotNetCoreCLI@2
       displayName: 'Build package'
       inputs:
