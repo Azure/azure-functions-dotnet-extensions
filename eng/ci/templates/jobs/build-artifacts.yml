@@ -23,7 +23,10 @@ jobs:
   steps:
   - pwsh: dotnet --version
     displayName: "Echo dotnet version"
-  
+
+  - task: NuGetAuthenticate@1
+    displayName: 'Authenticate NuGet feeds'
+
   - task: DotNetCoreCLI@2
     displayName: 'Build project'
     inputs:
